@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <h1 class="text-8xl font-black text-emerald-800">{{ title }}</h1>
-  </div>
+  <main>
+    <Navbar />
+    <RouterView></RouterView>
+  </main>
 </template>
 <script>
+import Navbar from "./components/navbar.vue";
+
 export default {
   name: "App",
   data() {
     return {
       title: "Holaa",
     };
+  },
+  components: {
+    Navbar,
   },
 };
 </script>
